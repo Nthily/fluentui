@@ -75,12 +75,12 @@ fun SquareStyle() {
 }
 
 internal val people = listOf(
-    People(AvatarSize.XxLarge, R.drawable.avatar_allan_munger),
-    People(AvatarSize.Xlarge, R.drawable.avatar_amanda_brady),
+    People(AvatarSize.XXLarge, R.drawable.avatar_allan_munger),
+    People(AvatarSize.XLarge, R.drawable.avatar_amanda_brady),
     People(AvatarSize.Large, R.drawable.avatar_ashley_mccarthy),
     People(AvatarSize.Medium, R.drawable.avatar_carlos_slattery),
     People(AvatarSize.Small, R.drawable.avatar_carole_poland),
-    People(AvatarSize.Xsmall, R.drawable.avatar_cecil_folk)
+    People(AvatarSize.XSmall, R.drawable.avatar_cecil_folk)
 )
 
 internal data class People(

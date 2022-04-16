@@ -14,7 +14,7 @@ import androidx.compose.ui.layout.ContentScale
 @Composable
 fun Avatar(
     modifier: Modifier = Modifier,
-    size: AvatarSize = AvatarSize.XxLarge,
+    size: AvatarSize = AvatarSize.XXLarge,
     style: AvatarStyle = AvatarStyle.Circle,
     painter: Painter,
     contentDescription: String?,
