@@ -6,6 +6,6 @@ import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.dp
 
 sealed class AvatarStyle(val shape: Shape) {
-    object CIRCLE: AvatarStyle(CircleShape)
-    object SQUARE: AvatarStyle(RoundedCornerShape(4.dp))
+    object Circle: AvatarStyle(CircleShape)
+    object Square: AvatarStyle(RoundedCornerShape(4.dp))
 }
