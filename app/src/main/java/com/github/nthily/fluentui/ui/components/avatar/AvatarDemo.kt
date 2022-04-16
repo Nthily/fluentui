@@ -39,7 +39,7 @@ fun CircleStyle() {
             CenterRow(
                 modifier = Modifier.fillMaxWidth(),
             ) {
-                Text(it.size.toString(), modifier = Modifier.width(60.dp))
+                Text(it.size.toString(), modifier = Modifier.width(90.dp))
                 WidthSpacer(value = 16.dp)
                 Avatar(
                     painter = painterResource(it.resId),
@@ -60,7 +60,7 @@ fun SquareStyle() {
             CenterRow(
                 modifier = Modifier.fillMaxWidth(),
             ) {
-                Text(it.size.toString(), modifier = Modifier.width(60.dp))
+                Text(it.size.toString(), modifier = Modifier.width(90.dp))
                 WidthSpacer(value = 16.dp)
                 Avatar(
                     painter = painterResource(it.resId),
