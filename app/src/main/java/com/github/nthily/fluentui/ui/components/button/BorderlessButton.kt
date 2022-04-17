@@ -3,7 +3,9 @@ package com.github.nthily.fluentui.ui.components.button
 import androidx.compose.foundation.BorderStroke
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
-import androidx.compose.material.*
+import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.ProvideTextStyle
+import androidx.compose.material.Surface
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -15,13 +17,13 @@ import com.github.nthily.fluentui.ui.components.theme.FluentUi
 
 @OptIn(ExperimentalMaterialApi::class)
 @Composable
-fun Button(
+fun BorderlessButton(
     onClick: () -> Unit,
     modifier: Modifier = Modifier,
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     border: BorderStroke? = null,
-    values: BaseButtonInterface = FluentUiButtonDefault.buttonValues(),
+    values: BaseButtonInterface = FluentUiButtonDefault.borderlessButtonValues(),
     content: @Composable RowScope.() -> Unit
 ) {
     val contentColor by values.contentColor(enabled)

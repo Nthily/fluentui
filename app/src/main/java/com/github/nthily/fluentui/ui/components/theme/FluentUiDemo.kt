@@ -1,6 +1,5 @@
-package com.github.nthily.fluentui.ui.components.fluentui
+package com.github.nthily.fluentui.ui.components.theme
 
-import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding

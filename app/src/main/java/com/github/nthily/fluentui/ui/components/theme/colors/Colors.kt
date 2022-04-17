@@ -1,15 +1,11 @@
-package com.github.nthily.fluentui.ui.components.fluentui.colors
+package com.github.nthily.fluentui.ui.components.theme.colors
 
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.primarySurface
 import androidx.compose.material.ripple.LocalRippleTheme
-import androidx.compose.material.ripple.RippleTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 
 
-// Reference Sources
-// https://github.com/microsoft/fluentui-android/blob/master/FluentUI/src/main/res/values/themes.xml
+// Reference Source: https://github.com/microsoft/fluentui-android/blob/master/FluentUI/src/main/res/values/themes.xml
 
 class Colors(
     colorPrimary: Color,
@@ -158,8 +154,8 @@ fun lightColors(
     buttonBorderlessBackgroundDefaultColor: Color = Color.Transparent,
     buttonBorderlessBackgroundDisabledColor: Color = Color.Transparent,
     buttonBorderlessBackgroundPressedColor: Color = LocalRippleTheme.current.defaultColor(),
-    buttonBorderlessTextDefaultColor: Color = Color.Transparent,
-    buttonBorderlessTextDisabledColor: Color = Color.Transparent,
+    buttonBorderlessTextDefaultColor: Color = colorPrimary,
+    buttonBorderlessTextDisabledColor: Color = Color(0xFFACACAC),
     buttonOutlinedTextDefaultColor: Color = colorPrimary,
     buttonOutlinedTextPressedColor: Color = Color(0xFFC7E0F4),
     buttonOutlinedTextDisabledColor: Color = Color(0xFFACACAC),

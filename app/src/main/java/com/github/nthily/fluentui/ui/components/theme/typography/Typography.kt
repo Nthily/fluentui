@@ -1,4 +1,4 @@
-package com.github.nthily.fluentui.ui.components.fluentui.typography
+package com.github.nthily.fluentui.ui.components.theme.typography
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.staticCompositionLocalOf
@@ -7,11 +7,11 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
-
-
 val LocalFluentUiTypography = staticCompositionLocalOf {
     FluentUiTypography()
 }
+
+// Reference Source: https://github.com/microsoft/fluentui-android/blob/master/fluentui_core/src/main/res/values/styles_font.xml
 
 class FluentUiTypography {
     val headline @Composable

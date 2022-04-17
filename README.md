@@ -1,6 +1,6 @@
 # fluentui (WIP)
 
-Implements Microsoft's Fluent Design System in Jetpack Compose.
+Microsoft Fluent UI implemented in Jetpack Compose.
 
 ## Controls
 
