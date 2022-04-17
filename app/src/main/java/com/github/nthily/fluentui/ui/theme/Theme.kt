@@ -6,8 +6,8 @@ import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import com.github.nthily.fluentui.ui.components.fluentui.FluentUiTypography
-import com.github.nthily.fluentui.ui.components.fluentui.LocalFluentUiTypography
+import com.github.nthily.fluentui.ui.components.fluentui.typography.FluentUiTypography
+import com.github.nthily.fluentui.ui.components.fluentui.typography.LocalFluentUiTypography
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
