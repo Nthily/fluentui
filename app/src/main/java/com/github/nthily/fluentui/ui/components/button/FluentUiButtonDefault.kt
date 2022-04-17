@@ -8,13 +8,12 @@ import androidx.compose.runtime.State
 import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
-import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.github.nthily.fluentui.ui.components.theme.FluentUi
 
 @Stable
-interface BaseButtonInterface {
+interface BaseButtonValues {
     val paddingValues: PaddingValues
     val minHeight: Dp
     val shape: Shape
@@ -35,7 +34,7 @@ class BaseButtonImpl(
     override val minHeight: Dp = 36.dp,
     override val shape: Shape = RoundedCornerShape(2.dp),
     override val rippleColor: Color,
-) : BaseButtonInterface {
+) : BaseButtonValues {
     @Composable
     override fun backgroundColor(enabled: Boolean): State<Color> {
         return rememberUpdatedState(if (enabled) backgroundColor else disabledBackgroundColor)
@@ -56,14 +55,14 @@ object FluentUiButtonDefault {
         disabledContentColor: Color = FluentUi.colors.buttonTextDisabledColor,
         minHeight: Dp = 36.dp,
         rippleColor: Color = FluentUi.colors.buttonBackgroundPressedColor,
-    ): BaseButtonInterface {
+    ): BaseButtonValues {
         return BaseButtonImpl(
             backgroundColor = backgroundColor,
             contentColor = contentColor,
             disabledBackgroundColor = disabledBackgroundColor,
             disabledContentColor = disabledContentColor,
             minHeight = minHeight,
-            paddingValues = PaddingValues(horizontal = 16.dp, vertical = (8.5).dp),
+            paddingValues = PaddingValues(horizontal = 18.dp, vertical = (8.5).dp),
             rippleColor = rippleColor,
         )
     }
@@ -75,7 +74,7 @@ object FluentUiButtonDefault {
         disabledBackgroundColor: Color = FluentUi.colors.buttonBorderlessBackgroundDisabledColor,
         disabledContentColor: Color = FluentUi.colors.buttonBorderlessTextDisabledColor,
         rippleColor: Color = FluentUi.colors.buttonBorderlessBackgroundPressedColor,
-    ): BaseButtonInterface {
+    ): BaseButtonValues {
         return BaseButtonImpl(
             backgroundColor = backgroundColor,
             contentColor = contentColor,

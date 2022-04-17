@@ -21,11 +21,11 @@ fun Button(
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     border: BorderStroke? = null,
-    values: BaseButtonInterface = FluentUiButtonDefault.buttonValues(),
+    values: BaseButtonValues = FluentUiButtonDefault.buttonValues(),
     content: @Composable RowScope.() -> Unit
 ) {
     val contentColor by values.contentColor(enabled)
-    val background = values.backgroundColor(enabled).value
+    val background by values.backgroundColor(enabled)
     Surface(
         modifier = modifier,
         shape = values.shape,
