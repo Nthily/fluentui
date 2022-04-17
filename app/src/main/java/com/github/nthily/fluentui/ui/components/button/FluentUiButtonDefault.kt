@@ -62,7 +62,7 @@ object FluentUiButtonDefault {
             disabledBackgroundColor = disabledBackgroundColor,
             disabledContentColor = disabledContentColor,
             minHeight = minHeight,
-            paddingValues = PaddingValues(horizontal = 18.dp, vertical = (8.5).dp),
+            paddingValues = PaddingValues(horizontal = 16.dp, vertical = (8.5).dp),
             rippleColor = rippleColor,
         )
     }
