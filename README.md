@@ -6,10 +6,27 @@ Microsoft Fluent UI implemented in Jetpack Compose.
 
 Some of the controls available include:
 
-- [] [ActionBarLayout]()
-
-
-
-* [Avatar](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/avatar)
-* [Typography](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/theme)
-* [Button](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/button)
+⬜️ ActionBarLayout
+⬜️ AppBarLayout
+✅ [Avatar](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/avatar)
+⬜️ AvatarGroup
+✅ [Button](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/button)
+⬜️ BottomNavigation
+⬜️ BottomSheet
+⬜️ Calendar
+⬜️ ContextualCommendBar
+⬜️ DateTimePicker
+⬜️ Drawer
+⬜️ ListItem
+⬜️ PeoplePicker
+⬜️ PersistentBottomSheet
+⬜️ PersonaChip
+⬜️ PersonaList
+⬜️ Persona
+⬜️ PopupMenu
+⬜️ Progress
+⬜️ SnackBar
+⬜️ TabLayout
+⬜️ Template
+⬜️ Tooltip
+✅ [Typography](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/theme)
