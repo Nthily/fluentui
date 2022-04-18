@@ -28,9 +28,6 @@ fun ButtonDemo() {
             .background(FluentUi.colors.backgroundColor)
             .padding(16.dp)
     ) {
-        androidx.compose.material.Button(onClick = { /*TODO*/ }) {
-
-        }
         Text(
             text = "Button",
             style = FluentUi.typography.headline,
@@ -46,39 +43,46 @@ fun ButtonDemo() {
         ) {
             Text("BUTTON")
         }
+        HeightSpacer(value = 5.dp)
         Button(
             onClick = { },
             enabled = false
         ) {
             Text("DISABLED BUTTON")
         }
+        HeightSpacer(value = 5.dp)
         BorderlessButton(
             onClick = { /*TODO*/ }
         ) {
             Text("BORDERLESS BUTTON")
         }
+        HeightSpacer(value = 5.dp)
         BorderlessButton(
             onClick = { /*TODO*/ },
             enabled = false
         ) {
             Text("BORDERLESS DISABLED BUTTON")
         }
+        HeightSpacer(value = 5.dp)
         LargeButton(
             onClick = {  },
         ) {
             Text("LARGE BUTTON")
         }
+        HeightSpacer(value = 5.dp)
         LargeButton(
             onClick = { /*TODO*/ },
             enabled = false
         ) {
             Text("LARGE DISABLED BUTTON")
         }
+        HeightSpacer(value = 5.dp)
         OutlinedButton(
             onClick = { /*TODO*/ },
         ) {
             Text("OUTLINED BUTTON")
         }
+        HeightSpacer(value = 5.dp)
         OutlinedButton(
             onClick = { /*TODO*/ },
             enabled = false

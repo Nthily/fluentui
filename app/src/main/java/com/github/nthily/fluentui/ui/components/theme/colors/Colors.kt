@@ -35,14 +35,14 @@ interface IFluentUiColors {
     // Button
     val buttonBackgroundDefaultColor: Color
     val buttonBackgroundDisabledColor: Color
-    val buttonBackgroundPressedColor: Color get() = Color.Black.copy(alpha = 1f)
+    val buttonBackgroundPressedColor: Color get() = Color.Black
     val buttonTextDefaultColor: Color
     val buttonTextDisabledColor: Color
 
     // Button borderless
     val buttonBorderlessBackgroundDefaultColor: Color
     val buttonBorderlessBackgroundDisabledColor: Color
-    val buttonBorderlessBackgroundPressedColor: Color get() = Color.Black.copy(alpha = 0.1f)
+    val buttonBorderlessBackgroundPressedColor: Color get() = Color.Black
     val buttonBorderlessTextDefaultColor: Color
     val buttonBorderlessTextDisabledColor: Color
     val buttonBorderlessTextPressedColor: Color
