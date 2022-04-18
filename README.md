@@ -21,7 +21,6 @@ Some of the controls available include:
 ⬜️ BottomSheet
 
 ⬜️ Calendar
-
 ⬜️ ContextualCommendBar
 
 ⬜️ DateTimePicker
@@ -56,7 +55,5 @@ Some of the controls available include:
 
 
 - [] Persona
-
 - [x] PopupMenu
-
 - [x] [Progress]()
