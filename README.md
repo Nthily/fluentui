@@ -11,7 +11,7 @@ Some of the controls available include:
 - [x] [Avatar](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/avatar)
 - [ ] AvatarGroup
 - [x] [Button](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/button)
-- [ ] BottomNavigation
+- [x] [BottomNavigation](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/bottomNavigation)
 - [ ] BottomSheet
 - [ ] Calendar
 - [ ] ContextualCommendBar

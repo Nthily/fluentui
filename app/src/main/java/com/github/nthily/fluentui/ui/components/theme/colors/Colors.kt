@@ -32,6 +32,11 @@ interface IFluentUiColors {
     val foregroundOnSecondaryColor: Color
     val diverColor: Color
 
+    // BottomNavigation
+    val bottomNavigationBackgroundColor: Color
+    val bottomNavigationForegroundActiveColor: Color
+    val bottomNavigationForegroundInactiveColor: Color
+
     // Button
     val buttonBackgroundDefaultColor: Color
     val buttonBackgroundDisabledColor: Color
@@ -79,6 +84,10 @@ private object LightColors: IFluentUiColors {
     override val foregroundOnSecondaryColor: Color = Color.White
     override val diverColor: Color = Color(0xFFE1E1E1)
 
+    override val bottomNavigationBackgroundColor: Color = backgroundColor
+    override val bottomNavigationForegroundActiveColor: Color = colorPrimary
+    override val bottomNavigationForegroundInactiveColor: Color = foregroundSecondaryColor
+
     override val buttonBackgroundDefaultColor: Color = backgroundPrimaryColor
     override val buttonBackgroundDisabledColor: Color = Color(0xFFF1F1F1)
 
@@ -120,6 +129,10 @@ private object DarkColors: IFluentUiColors {
     override val foregroundOnPrimaryColor: Color = Color.Black
     override val foregroundOnSecondaryColor: Color = Color.White
     override val diverColor: Color = Color(0xFF292929)
+
+    override val bottomNavigationBackgroundColor: Color = backgroundColor
+    override val bottomNavigationForegroundActiveColor: Color = colorPrimary
+    override val bottomNavigationForegroundInactiveColor: Color = foregroundSecondaryColor
 
     override val buttonBackgroundDefaultColor: Color = backgroundPrimaryColor
     override val buttonBackgroundPressedColor: Color get() = colorPrimaryDarker
