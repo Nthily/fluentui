@@ -104,34 +104,29 @@ private object DarkColors: IFluentUiColors {
     override val foregroundOnSecondaryColor: Color = Color.White
     override val diverColor: Color = Color(0xFF292929)
     override val buttonBackgroundDefaultColor: Color = backgroundPrimaryColor
-    override val buttonBackgroundDisabledColor: Color = Color(0xFFF1F1F1)
+    override val buttonBackgroundDisabledColor: Color = Color(0xFF0086F0)
     override val buttonTextDefaultColor: Color = foregroundOnPrimaryColor
-    override val buttonTextDisabledColor: Color = Color(0xFFACACAC)
+    override val buttonTextDisabledColor: Color = Color(0xFF004C87)
     override val buttonBorderlessBackgroundDefaultColor: Color = Color.Transparent
     override val buttonBorderlessBackgroundDisabledColor: Color = Color.Transparent
     override val buttonBorderlessTextDefaultColor: Color = colorPrimary
     override val buttonBorderlessTextDisabledColor: Color = Color(0xFFACACAC)
     override val buttonOutlinedTextDefaultColor: Color = Color(0xFF0086F0)
     override val buttonOutlinedTextPressedColor: Color = Color(0xFF3AA0F3)
-    override val buttonOutlinedTextDisabledColor: Color = Color(0xFFACACAC)
+    override val buttonOutlinedTextDisabledColor: Color = Color(0xFF404040)
     override val buttonOutlinedStrokeDefaultColor: Color = Color(0xFF3AA0F3)
-    override val buttonOutlinedStrokePressedColor: Color = Color(0xFFDEECF9)
-    override val buttonOutlinedStrokeDisabledColor: Color = Color(0xFFF1F1F1)
+    override val buttonOutlinedStrokePressedColor: Color = Color(0xFF092C47)
+    override val buttonOutlinedStrokeDisabledColor: Color = Color(0xFF292929)
     override val isLight: Boolean = false
 }
 
 class FluentUiColors {
-    var isLight by mutableStateOf(true)
-    val colors by mutableStateOf(
-        if (isLight) {
-            LightColors
-        } else {
-            DarkColors
-        }
-    )
-    fun toggleColor() {
-        isLight = !isLight
-        println(colors)
+    var colors: IFluentUiColors = LightColors
+    fun changeLightColors() {
+        colors = LightColors
+    }
+    fun changeDarkColors() {
+        colors = DarkColors
     }
 }
 

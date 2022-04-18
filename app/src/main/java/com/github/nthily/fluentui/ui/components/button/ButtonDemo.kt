@@ -1,5 +1,6 @@
 package com.github.nthily.fluentui.ui.components.button
 
+import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
@@ -18,10 +19,10 @@ import com.github.nthily.fluentui.utils.components.HeightSpacer
 
 @Composable
 fun ButtonDemo() {
-    val colors = LocalFluentUiColors.current
     Column(
         modifier = Modifier
             .fillMaxSize()
+            .background(FluentUi.colors.backgroundColor)
             .padding(16.dp)
     ) {
         Text(
@@ -34,7 +35,7 @@ fun ButtonDemo() {
         HeightSpacer(value = 10.dp)
         Button(
             onClick = {
-                  colors.toggleColor()
+
             },
         ) {
             Text("BUTTON")

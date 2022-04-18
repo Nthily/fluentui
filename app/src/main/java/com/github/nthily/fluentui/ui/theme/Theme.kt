@@ -6,9 +6,6 @@ import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import androidx.compose.runtime.LaunchedEffect
-import androidx.compose.runtime.derivedStateOf
-import com.github.nthily.fluentui.ui.components.theme.FluentUi
 import com.github.nthily.fluentui.ui.components.theme.colors.FluentUiColors
 import com.github.nthily.fluentui.ui.components.theme.colors.LocalFluentUiColors
 import com.github.nthily.fluentui.ui.components.theme.typography.FluentUiTypography
@@ -37,6 +34,8 @@ private val LightColorPalette = lightColors(
 
 @Composable
 fun FluentUiTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
+    val fluentUiColors = FluentUiColors()
+    if (darkTheme) fluentUiColors.changeDarkColors() else fluentUiColors.changeLightColors()
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {
@@ -44,7 +43,7 @@ fun FluentUiTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composab
     }
     CompositionLocalProvider(
         LocalFluentUiTypography provides FluentUiTypography(),
-        LocalFluentUiColors provides FluentUiColors()
+        LocalFluentUiColors provides fluentUiColors
     ) {
         MaterialTheme(
             colors = colors,
