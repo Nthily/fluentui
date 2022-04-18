@@ -55,6 +55,8 @@ Some of the controls available include:
 ✅ [Typography](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/theme)
 
 
-[] Persona
-[] PopupMenu
-[x] [Progress]()
+- [] Persona
+
+- [x] PopupMenu
+
+- [x] [Progress]()
