@@ -53,3 +53,8 @@ Some of the controls available include:
 ⬜️ Tooltip
 
 ✅ [Typography](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/theme)
+
+
+- [] Persona
+- [] PopupMenu
+- [] [Progress]()
