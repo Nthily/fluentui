@@ -11,10 +11,7 @@ import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.ProvideTextStyle
 import androidx.compose.material.Surface
 import androidx.compose.material.ripple.rememberRipple
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.getValue
-import androidx.compose.runtime.mutableStateOf
-import androidx.compose.runtime.remember
+import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -33,11 +30,14 @@ fun OutlinedButton(
     values: BaseButtonValues = FluentUiButtonDefault.outlinedButtonValues(),
     content: @Composable RowScope.() -> Unit
 ) {
-    val pressed = interactionSource.collectIsPressedAsState().value
+    val pressed by interactionSource.collectIsPressedAsState()
 
     val defaultBorderColor = FluentUi.colors.buttonOutlinedStrokeDefaultColor
     val pressedBorderColor = values.rippleColor
     val disabledBorderColor = FluentUi.colors.buttonOutlinedStrokeDisabledColor
+
+    val textPressedColor = FluentUi.colors.buttonOutlinedTextPressedColor
+    val textDefaultColor by values.contentColor(enabled)
 
     val border by remember(enabled, pressed) {
         when {
@@ -47,8 +47,9 @@ fun OutlinedButton(
         }
     }
 
-    val contentColor = if (pressed) FluentUi.colors.buttonOutlinedTextPressedColor
-        else values.contentColor(enabled).value
+    val contentColor by derivedStateOf {
+        if (pressed) textPressedColor else textDefaultColor
+    }
     val background by values.backgroundColor(enabled)
 
     Box(

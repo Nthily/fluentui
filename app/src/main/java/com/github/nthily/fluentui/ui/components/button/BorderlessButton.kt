@@ -5,12 +5,14 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
+import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.ProvideTextStyle
 import androidx.compose.material.Surface
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.derivedStateOf
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
@@ -32,13 +34,20 @@ fun BorderlessButton(
     values: BaseButtonValues = FluentUiButtonDefault.borderlessButtonValues(),
     content: @Composable RowScope.() -> Unit
 ) {
-    val contentColor by values.contentColor(enabled)
+    val pressed = interactionSource.collectIsPressedAsState().value
+    val textPressedColor = FluentUi.colors.buttonBorderlessTextPressedColor
+    val textDefaultColor by values.contentColor(enabled)
+
+    val contentColor by derivedStateOf {
+        if (pressed) textPressedColor else textDefaultColor
+    }
+
     val background by values.backgroundColor(enabled)
     Box(
         modifier = modifier
             .clip(values.shape)
             .background(background)
-            .border(border?: BorderStroke(0.dp, Color.Transparent))
+            .border(border ?: BorderStroke(0.dp, Color.Transparent))
             .clickable(
                 onClick = onClick,
                 enabled = enabled,
