@@ -7,7 +7,10 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.ButtonElevation
 import androidx.compose.material.Divider
+import androidx.compose.material.Icon
 import androidx.compose.material.Text
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.rounded.Favorite
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -25,6 +28,9 @@ fun ButtonDemo() {
             .background(FluentUi.colors.backgroundColor)
             .padding(16.dp)
     ) {
+        androidx.compose.material.Button(onClick = { /*TODO*/ }) {
+
+        }
         Text(
             text = "Button",
             style = FluentUi.typography.headline,

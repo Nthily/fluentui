@@ -8,6 +8,7 @@ import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.ExperimentalMaterialApi
+import androidx.compose.material.LocalContentColor
 import androidx.compose.material.ProvideTextStyle
 import androidx.compose.material.Surface
 import androidx.compose.material.ripple.rememberRipple
@@ -64,17 +65,19 @@ fun OutlinedButton(
                 indication = rememberRipple(color = values.rippleColor)
             )
     ) {
-        ProvideTextStyle(FluentUi.typography.body2.copy(contentColor)) {
-            Row(
-                Modifier
-                    .defaultMinSize(
-                        minHeight = values.minHeight
-                    )
-                    .padding(values.paddingValues),
-                horizontalArrangement = Arrangement.Center,
-                verticalAlignment = Alignment.CenterVertically,
-                content = content
-            )
+        CompositionLocalProvider(LocalContentColor provides contentColor) {
+            ProvideTextStyle(FluentUi.typography.body2.copy(contentColor)) {
+                Row(
+                    Modifier
+                        .defaultMinSize(
+                            minHeight = values.minHeight
+                        )
+                        .padding(values.paddingValues),
+                    horizontalArrangement = Arrangement.Center,
+                    verticalAlignment = Alignment.CenterVertically,
+                    content = content
+                )
+            }
         }
     }
 }
