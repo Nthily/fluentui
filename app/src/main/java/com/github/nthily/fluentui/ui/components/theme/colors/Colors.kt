@@ -131,6 +131,7 @@ private object DarkColors: IFluentUiColors {
 
     override val buttonBorderlessBackgroundDefaultColor: Color = Color.Transparent
     override val buttonBorderlessBackgroundDisabledColor: Color = Color.Transparent
+    override val buttonBorderlessBackgroundPressedColor @Composable get() = Color.Transparent
     override val buttonBorderlessTextDefaultColor: Color = colorPrimary
     override val buttonBorderlessTextDisabledColor: Color = Color(0xFF6E6E6E)
     override val buttonBorderlessTextPressedColor: Color = colorPrimaryDark
