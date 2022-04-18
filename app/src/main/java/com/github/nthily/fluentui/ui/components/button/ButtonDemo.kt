@@ -32,71 +32,51 @@ fun ButtonDemo() {
         HeightSpacer(value = 10.dp)
         Divider(thickness = 1.dp, color = FluentUi.colors.diverColor)
         HeightSpacer(value = 10.dp)
-        androidx.compose.material.Button(onClick = { /*TODO*/ },
-            elevation = null
+        Button(
+            onClick = {
+                  colors.toggleColor()
+            },
         ) {
-
+            Text("BUTTON")
         }
-        androidx.compose.material.Button(onClick = { /*TODO*/ },
-            elevation = null
+        Button(
+            onClick = { },
+            enabled = false
         ) {
-
+            Text("DISABLED BUTTON")
         }
-        androidx.compose.material.Button(onClick = { /*TODO*/ },
-            elevation = null
+        BorderlessButton(
+            onClick = { /*TODO*/ }
         ) {
-
+            Text("BORDERLESS BUTTON")
         }
-        androidx.compose.material.Button(onClick = { /*TODO*/ },
-            elevation = null
+        BorderlessButton(
+            onClick = { /*TODO*/ },
+            enabled = false
         ) {
-
+            Text("BORDERLESS DISABLED BUTTON")
         }
-//        Button(
-//            onClick = {
-//                  colors.toggleColor()
-//            },
-//        ) {
-//            Text("BUTTON")
-//        }
-//        Button(
-//            onClick = { },
-//            enabled = false
-//        ) {
-//            Text("DISABLED BUTTON")
-//        }
-//        BorderlessButton(
-//            onClick = { /*TODO*/ }
-//        ) {
-//            Text("BORDERLESS BUTTON")
-//        }
-//        BorderlessButton(
-//            onClick = { /*TODO*/ },
-//            enabled = false
-//        ) {
-//            Text("BORDERLESS DISABLED BUTTON")
-//        }
-//        LargeButton(
-//            onClick = {  },
-//        ) {
-//            Text("LARGE BUTTON")
-//        }
-//        LargeButton(
-//            onClick = { /*TODO*/ },
-//            enabled = false
-//        ) {
-//            Text("LARGE DISABLED BUTTON")
-//        }
-//        OutlinedButton(
-//            onClick = { /*TODO*/ },
-//        ) {
-//            Text("OUTLINED BUTTON")
-//        }
-//        OutlinedButton(
-//            onClick = { /*TODO*/ },
-//            enabled = false
-//        ) {
-//            Text("OUTLINED DISABLED BUTTON")
-//        }
+        LargeButton(
+            onClick = {  },
+        ) {
+            Text("LARGE BUTTON")
+        }
+        LargeButton(
+            onClick = { /*TODO*/ },
+            enabled = false
+        ) {
+            Text("LARGE DISABLED BUTTON")
+        }
+        OutlinedButton(
+            onClick = { /*TODO*/ },
+        ) {
+            Text("OUTLINED BUTTON")
+        }
+        OutlinedButton(
+            onClick = { /*TODO*/ },
+            enabled = false
+        ) {
+            Text("OUTLINED DISABLED BUTTON")
+        }
     }
 }

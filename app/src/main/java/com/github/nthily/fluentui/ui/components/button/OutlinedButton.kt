@@ -1,6 +1,9 @@
 package com.github.nthily.fluentui.ui.components.button
 
 import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.background
+import androidx.compose.foundation.border
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.interaction.collectIsPressedAsState
 import androidx.compose.foundation.layout.*
@@ -14,6 +17,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.dp
@@ -47,17 +51,17 @@ fun OutlinedButton(
         else values.contentColor(enabled).value
     val background by values.backgroundColor(enabled)
 
-    Surface(
-        modifier = modifier,
-        shape = values.shape,
-        color = background,
-        contentColor = contentColor.copy(alpha = 1f),
-        border = border,
-        onClick = onClick,
-        enabled = enabled,
-        role = Role.Button,
-        interactionSource = interactionSource,
-        indication = rememberRipple(color = values.rippleColor)
+    Box(
+        modifier = modifier
+            .clip(values.shape)
+            .background(background)
+            .border(border)
+            .clickable(
+                onClick = onClick,
+                enabled = enabled,
+                interactionSource = interactionSource,
+                indication = rememberRipple(color = values.rippleColor)
+            )
     ) {
         ProvideTextStyle(FluentUi.typography.body2.copy(contentColor)) {
             Row(
