@@ -35,14 +35,14 @@ interface IFluentUiColors {
     // Button
     val buttonBackgroundDefaultColor: Color
     val buttonBackgroundDisabledColor: Color
-    val buttonBackgroundPressedColor @Composable get() = LocalRippleTheme.current.defaultColor()
+    val buttonBackgroundPressedColor: Color get() = Color.Black.copy(alpha = 1f)
     val buttonTextDefaultColor: Color
     val buttonTextDisabledColor: Color
 
     // Button borderless
     val buttonBorderlessBackgroundDefaultColor: Color
     val buttonBorderlessBackgroundDisabledColor: Color
-    val buttonBorderlessBackgroundPressedColor @Composable get() = LocalRippleTheme.current.defaultColor()
+    val buttonBorderlessBackgroundPressedColor: Color get() = Color.Black.copy(alpha = 0.1f)
     val buttonBorderlessTextDefaultColor: Color
     val buttonBorderlessTextDisabledColor: Color
     val buttonBorderlessTextPressedColor: Color
@@ -81,7 +81,6 @@ private object LightColors: IFluentUiColors {
 
     override val buttonBackgroundDefaultColor: Color = backgroundPrimaryColor
     override val buttonBackgroundDisabledColor: Color = Color(0xFFF1F1F1)
-    override val buttonBackgroundPressedColor @Composable get() = colorPrimaryDark
 
     override val buttonTextDefaultColor: Color = foregroundOnPrimaryColor
     override val buttonTextDisabledColor: Color = Color(0xFFACACAC)
@@ -93,7 +92,7 @@ private object LightColors: IFluentUiColors {
     override val buttonBorderlessTextPressedColor: Color = colorPrimary
 
     override val buttonOutlinedTextDefaultColor: Color = colorPrimary
-    override val buttonOutlinedTextPressedColor: Color = colorPrimaryDark
+    override val buttonOutlinedTextPressedColor: Color = Color(0xFFC7E0F4)
     override val buttonOutlinedTextDisabledColor: Color = Color(0xFFACACAC)
     override val buttonOutlinedStrokeDefaultColor: Color = Color(0xFFC7E0F4)
     override val buttonOutlinedStrokePressedColor: Color = Color(0xFFDEECF9)
@@ -123,7 +122,7 @@ private object DarkColors: IFluentUiColors {
     override val diverColor: Color = Color(0xFF292929)
 
     override val buttonBackgroundDefaultColor: Color = backgroundPrimaryColor
-    override val buttonBackgroundPressedColor @Composable get() = colorPrimaryDarker
+    override val buttonBackgroundPressedColor: Color get() = colorPrimaryDarker
     override val buttonBackgroundDisabledColor: Color = Color(0xFF0086F0)
 
     override val buttonTextDefaultColor: Color = foregroundOnPrimaryColor
@@ -131,7 +130,7 @@ private object DarkColors: IFluentUiColors {
 
     override val buttonBorderlessBackgroundDefaultColor: Color = Color.Transparent
     override val buttonBorderlessBackgroundDisabledColor: Color = Color.Transparent
-    override val buttonBorderlessBackgroundPressedColor @Composable get() = Color.Transparent
+    override val buttonBorderlessBackgroundPressedColor: Color get() = Color.Transparent
     override val buttonBorderlessTextDefaultColor: Color = colorPrimary
     override val buttonBorderlessTextDisabledColor: Color = Color(0xFF6E6E6E)
     override val buttonBorderlessTextPressedColor: Color = colorPrimaryDark
