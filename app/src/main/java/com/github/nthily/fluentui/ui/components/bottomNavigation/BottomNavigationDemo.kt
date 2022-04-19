@@ -29,17 +29,23 @@ fun BottomNavigationDemo() {
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
-            Button(onClick = { alwaysShowLabel.value = !alwaysShowLabel.value }) {
+            Button(
+                onClick = { alwaysShowLabel.value = !alwaysShowLabel.value }
+            ) {
                 Text("TOGGLE LABELS")
             }
-            Button(onClick = {
-                if (screens.size == 4) screens.removeAt(screens.size - 1)
-            }) {
+            Button(
+                onClick = {
+                    if (screens.size == 4) screens.removeAt(screens.size - 1)
+                }
+            ) {
                 Text("SHOW THREE MENU ITEMS")
             }
-            Button(onClick = {
-                if (screens.size == 3) screens.add(Screen("Team", com.microsoft.fluent.mobile.icons.R.drawable.ic_fluent_people_team_24_regular))
-            }) {
+            Button(
+                onClick = {
+                    if (screens.size == 3) screens.add(Screen("Team", com.microsoft.fluent.mobile.icons.R.drawable.ic_fluent_people_team_24_regular))
+                }
+            ) {
                 Text("SHOW FOUR MENU ITEMS")
             }
         }

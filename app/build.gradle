@@ -60,4 +60,5 @@ dependencies {
     debugImplementation "androidx.compose.ui:ui-tooling:$compose_version"
 
     implementation 'com.microsoft.design:fluent-system-icons:1.1.166@aar'
+    implementation "androidx.compose.animation:animation-graphics:$compose_version"
 }

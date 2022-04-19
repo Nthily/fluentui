@@ -1,12 +1,11 @@
 package com.github.nthily.fluentui.ui.components.theme.colors
 
-import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 
 
 // Reference Source: https://github.com/microsoft/fluentui-android/blob/master/FluentUI/src/main/res/values/themes.xml
-
+@Stable
 interface IFluentUiColors {
     val colorPrimary: Color
     val colorPrimaryDark: Color
@@ -30,7 +29,7 @@ interface IFluentUiColors {
     val foregroundSecondaryIconColor: Color
     val foregroundOnPrimaryColor: Color
     val foregroundOnSecondaryColor: Color
-    val diverColor: Color
+    val dividerColor: Color
 
     // BottomNavigation
     val bottomNavigationBackgroundColor: Color
@@ -60,6 +59,10 @@ interface IFluentUiColors {
     val buttonOutlinedStrokePressedColor: Color
     val buttonOutlinedStrokeDisabledColor: Color
 
+    // Progress
+    val progressPrimaryColor: Color
+    val progressBackgroundColor: Color
+
     val isLight: Boolean
 }
 
@@ -82,7 +85,7 @@ private object LightColors: IFluentUiColors {
     override val foregroundSecondaryIconColor: Color = Color(0xFF919191)
     override val foregroundOnPrimaryColor: Color = Color.White
     override val foregroundOnSecondaryColor: Color = Color.White
-    override val diverColor: Color = Color(0xFFE1E1E1)
+    override val dividerColor: Color = Color(0xFFE1E1E1)
 
     override val bottomNavigationBackgroundColor: Color = backgroundColor
     override val bottomNavigationForegroundActiveColor: Color = colorPrimary
@@ -106,6 +109,10 @@ private object LightColors: IFluentUiColors {
     override val buttonOutlinedStrokeDefaultColor: Color = Color(0xFFC7E0F4)
     override val buttonOutlinedStrokePressedColor: Color = Color(0xFFDEECF9)
     override val buttonOutlinedStrokeDisabledColor: Color = Color(0xFFF1F1F1)
+
+    override val progressPrimaryColor: Color = colorPrimary
+    override val progressBackgroundColor: Color = Color(0xFFE1E1E1)
+
     override val isLight: Boolean = true
 }
 
@@ -128,7 +135,7 @@ private object DarkColors: IFluentUiColors {
     override val foregroundSecondaryIconColor: Color = Color(0xFF919191)
     override val foregroundOnPrimaryColor: Color = Color.Black
     override val foregroundOnSecondaryColor: Color = Color.White
-    override val diverColor: Color = Color(0xFF292929)
+    override val dividerColor: Color = Color(0xFF292929)
 
     override val bottomNavigationBackgroundColor: Color = backgroundColor
     override val bottomNavigationForegroundActiveColor: Color = colorPrimary
@@ -154,6 +161,10 @@ private object DarkColors: IFluentUiColors {
     override val buttonOutlinedStrokeDefaultColor: Color = Color(0xFF3AA0F3)
     override val buttonOutlinedStrokePressedColor: Color = Color(0xFF092C47)
     override val buttonOutlinedStrokeDisabledColor: Color = Color(0xFF292929)
+
+    override val progressPrimaryColor: Color = colorPrimary
+    override val progressBackgroundColor: Color = Color(0xFF212121)
+
     override val isLight: Boolean = false
 }
 

@@ -6,6 +6,9 @@ import androidx.activity.compose.setContent
 import com.github.nthily.fluentui.ui.components.bottomNavigation.BottomNavigation
 import com.github.nthily.fluentui.ui.components.bottomNavigation.BottomNavigationDemo
 import com.github.nthily.fluentui.ui.components.button.ButtonDemo
+import com.github.nthily.fluentui.ui.components.progress.CircularProgress
+import com.github.nthily.fluentui.ui.components.progress.LinearProgress
+import com.github.nthily.fluentui.ui.components.progress.ProgressDemo
 import com.github.nthily.fluentui.ui.theme.FluentUiTheme
 
 class MainActivity : ComponentActivity() {
@@ -13,7 +16,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             FluentUiTheme {
-                BottomNavigationDemo()
+                LinearProgress()
             }
         }
     }

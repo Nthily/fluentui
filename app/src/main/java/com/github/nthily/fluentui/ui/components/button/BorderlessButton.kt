@@ -32,7 +32,7 @@ fun BorderlessButton(
     values: BaseButtonValues = FluentUiButtonDefault.borderlessButtonValues(),
     content: @Composable RowScope.() -> Unit
 ) {
-    val pressed = interactionSource.collectIsPressedAsState().value
+    val pressed by interactionSource.collectIsPressedAsState()
     val textPressedColor = FluentUi.colors.buttonBorderlessTextPressedColor
     val textDefaultColor by values.contentColor(enabled)
 

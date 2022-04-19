@@ -25,6 +25,8 @@ Some of the controls available include:
 - [ ] Persona
 - [ ] PopupMenu
 - [ ] Progress
+    - [x] [CircularProgress](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/progress)
+    - [ ] LinearProgress
 - [ ] SnackBar
 - [ ] TabLayout
 - [ ] Template

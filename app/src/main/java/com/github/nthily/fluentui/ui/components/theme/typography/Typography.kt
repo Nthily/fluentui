@@ -6,6 +6,7 @@ import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
+import com.github.nthily.fluentui.ui.components.theme.FluentUi
 
 val LocalFluentUiTypography = staticCompositionLocalOf {
     FluentUiTypography()
@@ -15,52 +16,61 @@ val LocalFluentUiTypography = staticCompositionLocalOf {
 
 class FluentUiTypography {
     val headline @Composable
-    get() = TextStyle(
+        get() = TextStyle(
             fontSize = 28.sp,
             fontFamily = FontFamily.SansSerif,
-            fontWeight = FontWeight.Light
+            fontWeight = FontWeight.Light,
+            color = FluentUi.colors.textColorPrimary
         )
     val title1 @Composable
-    get() = TextStyle(
+        get() = TextStyle(
             fontSize = 20.sp,
             fontFamily = FontFamily.SansSerif,
-            fontWeight = FontWeight.Medium
+            fontWeight = FontWeight.Medium,
+            color = FluentUi.colors.textColorPrimary
         )
     val title2 @Composable
-    get() = TextStyle(
+        get() = TextStyle(
             fontSize = 20.sp,
-            fontFamily = FontFamily.SansSerif
+            fontFamily = FontFamily.SansSerif,
+            color = FluentUi.colors.textColorPrimary
         )
     val heading @Composable
-    get() = TextStyle(
+        get() = TextStyle(
             fontSize = 18.sp,
-            fontFamily = FontFamily.SansSerif
+            fontFamily = FontFamily.SansSerif,
+            color = FluentUi.colors.textColorPrimary
         )
     val subheading1 @Composable
-    get() = TextStyle(
+        get() = TextStyle(
             fontSize = 16.sp,
-            fontFamily = FontFamily.SansSerif
+            fontFamily = FontFamily.SansSerif,
+            color = FluentUi.colors.textColorPrimary
         )
     val subheading2 @Composable
-    get() = TextStyle(
+        get() = TextStyle(
             fontSize = 16.sp,
             fontFamily = FontFamily.SansSerif,
-            fontWeight = FontWeight.Medium
+            fontWeight = FontWeight.Medium,
+            color = FluentUi.colors.textColorPrimary
         )
     val body1 @Composable
-    get() = TextStyle(
-            fontSize = 14.sp,
-            fontFamily = FontFamily.SansSerif
-        )
-    val body2 @Composable
-    get() = TextStyle(
+        get() = TextStyle(
             fontSize = 14.sp,
             fontFamily = FontFamily.SansSerif,
-            fontWeight = FontWeight.Medium
+            color = FluentUi.colors.textColorPrimary
+        )
+    val body2 @Composable
+        get() = TextStyle(
+            fontSize = 14.sp,
+            fontFamily = FontFamily.SansSerif,
+            fontWeight = FontWeight.Medium,
+            color = FluentUi.colors.textColorPrimary
         )
     val caption @Composable
-    get() = TextStyle(
+        get() = TextStyle(
             fontSize = 12.sp,
-            fontFamily = FontFamily.SansSerif
+            fontFamily = FontFamily.SansSerif,
+            color = FluentUi.colors.textColorPrimary
         )
 }

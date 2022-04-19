@@ -2,10 +2,7 @@ package com.github.nthily.fluentui.ui.components.button
 
 import androidx.compose.foundation.layout.PaddingValues
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.runtime.Composable
-import androidx.compose.runtime.Stable
-import androidx.compose.runtime.State
-import androidx.compose.runtime.rememberUpdatedState
+import androidx.compose.runtime.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.Shape
 import androidx.compose.ui.unit.Dp
@@ -25,7 +22,8 @@ interface BaseButtonValues {
 }
 
 // Reference Source: https://github.com/microsoft/fluentui-android/blob/master/fluentui_others/src/main/res/values/styles.xml
-class BaseButtonImpl(
+@Immutable
+private class BaseButtonImpl(
     private val backgroundColor: Color,
     private val contentColor: Color,
     private val disabledBackgroundColor: Color,
