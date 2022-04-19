@@ -16,7 +16,7 @@ Some of the controls available include:
 - [ ] Calendar
 - [ ] ContextualCommendBar
 - [ ] DateTimePicker
-- [ ] [Divider](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/divider)
+- [x] [Divider](https://github.com/Nthily/fluentui/tree/main/app/src/main/java/com/github/nthily/fluentui/ui/components/divider)
 - [ ] Drawer
 - [ ] ListItem
 - [ ] PeoplePicker
