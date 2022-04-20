@@ -43,7 +43,7 @@ private class BaseButtonImpl(
     }
 }
 
-object FluentUiButtonDefault {
+object ButtonDefault {
 
     @Composable
     fun buttonValues(

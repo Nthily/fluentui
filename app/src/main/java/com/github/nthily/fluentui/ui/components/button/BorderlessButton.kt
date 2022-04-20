@@ -10,14 +10,13 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.LocalContentColor
 import androidx.compose.material.ProvideTextStyle
-import androidx.compose.material.Surface
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.github.nthily.fluentui.ui.components.theme.FluentUi
 
@@ -29,7 +28,8 @@ fun BorderlessButton(
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     border: BorderStroke? = null,
-    values: BaseButtonValues = FluentUiButtonDefault.borderlessButtonValues(),
+    values: BaseButtonValues = ButtonDefault.borderlessButtonValues(),
+    textStyle: TextStyle = FluentUi.typography.body2.copy(values.contentColor(enabled).value),
     content: @Composable RowScope.() -> Unit
 ) {
     val pressed by interactionSource.collectIsPressedAsState()
@@ -54,7 +54,7 @@ fun BorderlessButton(
             )
     ) {
         CompositionLocalProvider(LocalContentColor provides contentColor) {
-            ProvideTextStyle(FluentUi.typography.body2.copy(contentColor)) {
+            ProvideTextStyle(textStyle.copy(contentColor)) {
                 Row(
                     Modifier
                         .defaultMinSize(

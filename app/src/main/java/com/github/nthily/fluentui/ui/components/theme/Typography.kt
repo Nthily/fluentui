@@ -1,4 +1,4 @@
-package com.github.nthily.fluentui.ui.components.theme.typography
+package com.github.nthily.fluentui.ui.components.theme
 
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.staticCompositionLocalOf

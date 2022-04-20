@@ -9,7 +9,6 @@ import androidx.compose.foundation.layout.*
 import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.LocalContentColor
 import androidx.compose.material.ProvideTextStyle
-import androidx.compose.material.Surface
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -20,6 +19,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.github.nthily.fluentui.ui.components.theme.FluentUi
 
@@ -31,7 +31,8 @@ fun LargeButton(
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     border: BorderStroke? = null,
-    values: BaseButtonValues = FluentUiButtonDefault.largeButtonValues(),
+    values: BaseButtonValues = ButtonDefault.largeButtonValues(),
+    textStyle: TextStyle = FluentUi.typography.body2.copy(values.contentColor(enabled).value),
     content: @Composable RowScope.() -> Unit
 ) {
     val contentColor by values.contentColor(enabled)
@@ -50,7 +51,7 @@ fun LargeButton(
             )
     ) {
         CompositionLocalProvider(LocalContentColor provides contentColor) {
-            ProvideTextStyle(FluentUi.typography.body2.copy(contentColor)) {
+            ProvideTextStyle(textStyle) {
                 Row(
                     Modifier
                         .defaultMinSize(

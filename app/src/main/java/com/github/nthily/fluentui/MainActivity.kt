@@ -16,7 +16,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             FluentUiTheme {
-                LinearProgress()
+                ProgressDemo()
             }
         }
     }

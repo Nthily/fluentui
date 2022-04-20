@@ -4,7 +4,6 @@ import androidx.compose.foundation.*
 import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.*
-import androidx.compose.material.ripple.LocalRippleTheme
 import androidx.compose.material.ripple.rememberRipple
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
@@ -15,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.semantics.Role
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import com.github.nthily.fluentui.ui.components.theme.FluentUi
 
@@ -26,7 +26,8 @@ fun Button(
     enabled: Boolean = true,
     interactionSource: MutableInteractionSource = remember { MutableInteractionSource() },
     border: BorderStroke? = null,
-    values: BaseButtonValues = FluentUiButtonDefault.buttonValues(),
+    values: BaseButtonValues = ButtonDefault.buttonValues(),
+    textStyle: TextStyle = FluentUi.typography.body2.copy(values.contentColor(enabled).value),
     content: @Composable RowScope.() -> Unit
 ) {
     val contentColor by values.contentColor(enabled)
@@ -45,7 +46,7 @@ fun Button(
             )
     ) {
         CompositionLocalProvider(LocalContentColor provides contentColor) {
-            ProvideTextStyle(FluentUi.typography.body2.copy(contentColor)) {
+            ProvideTextStyle(textStyle) {
                 Row(
                     Modifier
                         .defaultMinSize(
