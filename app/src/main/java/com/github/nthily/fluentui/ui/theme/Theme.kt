@@ -4,11 +4,10 @@ import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.CompositionLocalProvider
-import com.github.nthily.fluentui.ui.components.theme.FluentUi
-import com.github.nthily.fluentui.ui.components.theme.colors.FluentUiColors
-import com.github.nthily.fluentui.ui.components.theme.colors.LocalFluentUiColors
-import com.github.nthily.fluentui.ui.components.theme.typography.FluentUiTypography
-import com.github.nthily.fluentui.ui.components.theme.typography.LocalFluentUiTypography
+import com.github.nthily.fluentui.component.theme.FluentUiColors
+import com.github.nthily.fluentui.component.theme.FluentUiTypography
+import com.github.nthily.fluentui.component.theme.LocalFluentUiColors
+import com.github.nthily.fluentui.component.theme.LocalFluentUiTypography
 
 private val DarkColorPalette = darkColors(
     primary = Purple200,
@@ -34,7 +33,7 @@ private val LightColorPalette = lightColors(
 @Composable
 fun FluentUiTheme(darkTheme: Boolean = isSystemInDarkTheme(), content: @Composable () -> Unit) {
     val fluentUiColors = FluentUiColors()
-    if (darkTheme) fluentUiColors.changeDarkColors() else fluentUiColors.changeLightColors()
+    if (darkTheme) fluentUiColors.toggleToDarkColor() else fluentUiColors.toggleToLightColor()
     val colors = if (darkTheme) {
         DarkColorPalette
     } else {
